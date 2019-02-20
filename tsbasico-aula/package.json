@@ -1,14 +1,21 @@
 {
   "name": "tsbasico-aula",
   "version": "1.0.0",
-  "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/inquirer": "0.0.43",
     "typescript": "^3.3.3"
-  }
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "inquirer": "^6.2.2",
+    "rxjs": "^6.4.0"
+  },
+  "description": ""
 }

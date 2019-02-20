@@ -1,6 +1,5 @@
-export class OlaMundo {
-    public run(){
-        console.log("Hello World")
-    }
-}
-new OlaMundo().run();
+import { AtividadeAvaliativa } from './AtividadeAvaliativa';
+//import {Perguntas} from './perguntas';
+
+new AtividadeAvaliativa().Busca();
+//new Perguntas().facaUmaPergunta();
