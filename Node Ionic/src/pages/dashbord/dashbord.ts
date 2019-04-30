@@ -5,6 +5,7 @@ import { Messages } from '../../providers/messages';
 import { Toast } from '../../providers/toast';
 import { Login } from '../../providers/login';
 import { List } from '../../providers/list';
+import { SaboresPage } from '../sabores/sabores';
 
 /**
  * Generated class for the DashbordPage page.
@@ -37,7 +38,9 @@ export class DashbordPage {
   }
   public logform2() {
     this.navCtrl.setRoot(PaginaNovaPage);
-
+  }
+  public cadastroSabores(){
+    this.navCtrl.setRoot(SaboresPage);
   }
   public consultForm() {
     this.list.pegando().subscribe(

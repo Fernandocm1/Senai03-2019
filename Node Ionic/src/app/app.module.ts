@@ -20,6 +20,7 @@ import { NavController } from "ionic-angular";
 import { DashbordPage } from '../pages/dashbord/dashbord';
 import { CadastroUsuarioPage } from '../pages/cadastro-usuario/cadastro-usuario';
 import { NovoProvider } from '../providers/novo';
+import { SaboresPage } from '../pages/sabores/sabores';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NovoProvider } from '../providers/novo';
     ListPage,
     PaginaNovaPage,
     CadastroUsuarioPage,
-    DashbordPage
+    DashbordPage,
+    SaboresPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { NovoProvider } from '../providers/novo';
     ListPage,
     PaginaNovaPage,
     CadastroUsuarioPage,
-    DashbordPage
+    DashbordPage,
+    SaboresPage
   ],
   providers: [
     StatusBar,

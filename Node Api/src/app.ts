@@ -157,6 +157,21 @@ app.post('/novo', function (req, res, next) {
     }
   );
 })
+app.post('/cadastroSabores', function (req, res, next) {
+  let insertSabor = 'insert into Sabores(sabores,preco,Tamanho_idTamanho) values(\'' + req.body.sabores + '\',\'' + req.body.preco + '\',\'' +  req.body.tamanhoSelecionado + '\')'
+  console.log(insertSabor);
+  //res.send(sql);
+  new MySQLFactory().getConnection().select(insertSabor).subscribe(
+    (data : any) => {
+      res.send({
+        sabor: req.body.sabores
+     })
+    },
+    (error : any) => {
+        console.log(error)
+    }
+  );
+})
 
 const port: number = 3000;
 //execucao do servidor

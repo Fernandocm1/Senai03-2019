@@ -130,6 +130,18 @@ app.post('/novo', function (req, res, next) {
         console.log(error);
     });
 });
+app.post('/cadastroSabores', function (req, res, next) {
+    var insertSabor = 'insert into Sabores(sabores,preco,Tamanho_idTamanho) values(\'' + req.body.sabores + '\',\'' + req.body.preco + '\',\'' + req.body.tamanhoSelecionado + '\')';
+    console.log(insertSabor);
+    //res.send(sql);
+    new mysql_factory_1.MySQLFactory().getConnection().select(insertSabor).subscribe(function (data) {
+        res.send({
+            sabor: req.body.sabores
+        });
+    }, function (error) {
+        console.log(error);
+    });
+});
 var port = 3000;
 //execucao do servidor
 app.listen(port, function () {
